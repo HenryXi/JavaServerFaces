@@ -3,25 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>JavaServerFaces</groupId>
-    <artifactId>JavaServerFaces</artifactId>
+    <artifactId>JavaServerFaces-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-        <dependencies>
-
-            <!-- For Java EE Application Server, uncomment this library
-            and comment the rest of the libraries
-            <dependency>
-            <groupId>javax.faces</groupId>
-            <artifactId>jsf-api</artifactId>
-            <version>2.0</version>
-            <scope>provided</scope>
-          </dependency>
-            -->
-
-            <!-- For Servlet Container like Tomcat -->
-            <!-- http://download.java.net/maven/2 -->
+    <packaging>pom</packaging>
+    <modules>
+        <module>JavaServerFaces_01HelloWorld</module>
+    </modules>
+    <dependencies>
             <dependency>
                 <groupId>com.sun.faces</groupId>
                 <artifactId>jsf-api</artifactId>
@@ -33,7 +22,6 @@
                 <version>2.1.0-b03</version>
             </dependency>
 
-            <!-- http://repo1.maven.org/maven -->
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>jstl</artifactId>
@@ -83,7 +71,4 @@
                 </plugin>
             </plugins>
         </build>
-
-
-
 </project>
