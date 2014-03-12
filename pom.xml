@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>JavaServerFaces_01HelloWorld</module>
+        <module>JavaServerFaces_02HelloWorldAjax</module>
     </modules>
     <dependencies>
             <dependency>
