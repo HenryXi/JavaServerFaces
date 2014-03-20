@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+    </h:head>
+    <h:body>
+    	
+    	<h1>JSF 2 dataTable example</h1>
+    	<h:form>
+    		<h:dataTable value="#{order.orderList}" var="o"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+
+    			<h:column>
+    			
+    				<f:facet name="header">Order No</f:facet>
+    				
+    				<h:inputText value="#{o.orderNo}" size="10" rendered="#{o.editable}" />
+    				
+    				<h:outputText value="#{o.orderNo}" rendered="#{not o.editable}" />
+					
+    			</h:column>
+    			
+    			<h:column>
+    			
+    				<f:facet name="header">Product Name</f:facet>
+    				
+    				<h:inputText value="#{o.productName}" size="20" rendered="#{o.editable}" />
+    				
+    				<h:outputText value="#{o.productName}" rendered="#{not o.editable}" />
+    				
+    			</h:column>
+    			
+    			<h:column>
+    				
+    				<f:facet name="header">Price</f:facet>
+    				
+    				<h:inputText value="#{o.price}" size="10" rendered="#{o.editable}" />
+    				
+    				<h:outputText value="#{o.price}" rendered="#{not o.editable}" />
+    				
+    			</h:column>
+    			
+    			<h:column>
+    				
+    				<f:facet name="header">Quantity</f:facet>
+    				
+    				<h:inputText value="#{o.qty}" size="5" rendered="#{o.editable}" />
+    				
+    				<h:outputText value="#{o.qty}" rendered="#{not o.editable}" />
+    				
+    			</h:column>
+    		
+    			<h:column>
+    				
+    				<f:facet name="header">Action</f:facet>
+    				
+    				<h:commandLink value="Edit" action="#{order.editAction(o)}" rendered="#{not o.editable}" />
+    				
+    			</h:column>
+
+    		</h:dataTable>
+    		
+    		<h:commandButton value="Save Changes" action="#{order.saveAction}" />
+    		
+    	</h:form>
+    </h:body>
+		
+</html>

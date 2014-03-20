@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      >
+    <h:body>
+    	
+    	<h1>JSF 2 convertNumber example</h1>
+			
+			<ol>
+				<li>
+					Amount [minFractionDigits="2"] : 
+					<h:outputText value="#{receipt.amount}" >
+						<f:convertNumber minFractionDigits="2" />
+					</h:outputText>
+				</li>
+				<li>
+					Amount [pattern="#0.000"] : 
+					<h:outputText value="#{receipt.amount}" >
+						<f:convertNumber pattern="#0.000" />
+					</h:outputText>
+				</li>
+				<li>
+					Amount [currencySymbol="$"] : 
+					<h:outputText value="#{receipt.amount}">
+						<f:convertNumber currencySymbol="$" type="currency" />
+					</h:outputText>
+				</li>
+				<li>
+					Amount [currencyCode="GBP"] : 
+					<h:outputText value="#{receipt.amount}" >
+						<f:convertNumber currencyCode="GBP" type="currency" />
+					</h:outputText>
+				</li>
+				<li>
+					Amount [type="percent"] : 
+					<h:outputText value="#{receipt.amount}" >
+						<f:convertNumber type="percent" />
+					</h:outputText>
+				</li>
+			</ol>
+			
+    </h:body>
+</html>

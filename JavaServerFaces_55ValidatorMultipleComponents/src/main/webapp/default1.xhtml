@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+
+	<h1>Multiple-Components Validator in JSF 2.0</h1>
+
+	<h:form id="register">
+
+		<h:message for="RegisterGroupPanel" style="color:red;" />
+
+		<h:panelGrid columns="3" id="RegisterGroupPanel">
+
+			<h:outputLabel for="username" value="Username : " />
+			<h:inputText id="username" value="#{user.username}" required="true"
+				requiredMessage="Please enter username" />
+			<h:message for="username" style="color: red;" />
+
+			<h:outputLabel for="password" value="Password : " />
+			<h:inputSecret id="password" value="#{user.password}" required="true"
+				requiredMessage="Please enter password">
+				<f:validator validatorId="passwordValidator" />
+				<f:attribute name="confirmPassword" value="#{confirmPassword}" />
+			</h:inputSecret>
+			<h:message for="password" style="color: red;" />
+
+			<h:outputLabel for="confirmPassword" value="Confirm password : " />
+			<h:inputSecret id="confirmPassword" required="true"
+				binding="#{confirmPassword}"
+				requiredMessage="Please enter confirm password" />
+			<h:message for="confirmPassword" style="color: red;" />
+
+		</h:panelGrid>
+
+		<h:commandButton action="thanks" value="register" />
+
+	</h:form>
+
+</h:body>
+
+</html>

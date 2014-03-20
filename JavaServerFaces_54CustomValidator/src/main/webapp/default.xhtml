@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:body>
+    	
+    	<h1>Custom validator in JSF 2.0</h1>
+		
+		<h:form>
+		
+			<h:panelGrid columns="3">
+			
+				Enter your email :
+				
+				<h:inputText id="email" value="#{user.email}" 
+					size="20" required="true" label="Email Address">
+					<f:validator validatorId="com.mkyong.EmailValidator" />
+				</h:inputText>
+				
+				<h:message for="email" style="color:red" />
+			
+			</h:panelGrid>
+			
+			<h:commandButton value="Submit" action="result" />
+			
+		</h:form>
+		
+    </h:body>
+</html>

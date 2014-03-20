@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      >
+    <h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+    </h:head>
+    <h:body>
+    	
+    	<h1>JSF 2 ui:repeat tag example</h1>
+
+    		<table class="order-table">
+    			<tr>
+    				<th class="order-table-header">Order No</th>
+    				<th class="order-table-header">Product Name</th>
+    				<th class="order-table-header">Price</th>
+    				<th class="order-table-header">Quantity</th>
+    			</tr>
+    			<tbody>
+	    			<ui:repeat var="o" value="#{order.orderList}" varStatus="status">
+	    				<h:panelGroup rendered="#{status.even}">
+		    				<tr>
+		    					<td class="order-table-even-row">#{o.orderNo}</td>
+		    					<td class="order-table-even-row">#{o.productName}</td>
+		    					<td class="order-table-even-row">#{o.price}</td>
+		    					<td class="order-table-even-row">#{o.qty}</td>
+		    				</tr>
+	    				</h:panelGroup>
+	    				<h:panelGroup rendered="#{status.odd}">
+	    					<tr>
+		    					<td class="order-table-odd-row">#{o.orderNo}</td>
+		    					<td class="order-table-odd-row">#{o.productName}</td>
+		    					<td class="order-table-odd-row">#{o.price}</td>
+		    					<td class="order-table-odd-row">#{o.qty}</td>
+		    				</tr>
+	    				</h:panelGroup>
+	    			</ui:repeat>
+    			</tbody>
+    		</table>
+    </h:body>
+</html>

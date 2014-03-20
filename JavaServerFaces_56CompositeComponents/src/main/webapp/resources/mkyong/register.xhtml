@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      >
+    
+    <composite:interface>
+    
+    	<composite:attribute name="nameLable" />
+    	<composite:attribute name="nameValue" />
+    	<composite:attribute name="emailLable" />
+    	<composite:attribute name="emailValue" />
+    	
+   		<composite:attribute name="registerButtonText" />
+    	<composite:attribute name="registerButtonAction" 
+    		method-signature="java.lang.String action()" />
+    		
+    </composite:interface>
+	
+	<composite:implementation>
+	
+		<h:form>
+			
+			<h:message for="textPanel" style="color:red;" />
+			
+			<h:panelGrid columns="2" id="textPanel">
+			
+				#{cc.attrs.nameLable} : 
+				<h:inputText id="name" value="#{cc.attrs.nameValue}" />
+				
+				#{cc.attrs.emailLable} : 
+				<h:inputText id="email" value="#{cc.attrs.emailValue}" />
+				
+			</h:panelGrid>
+			
+			<h:commandButton action="#{cc.attrs.registerButtonAction}" 
+				value="#{cc.attrs.registerButtonText}"
+			/>
+		
+		</h:form>
+		
+	</composite:implementation>
+	
+</html>

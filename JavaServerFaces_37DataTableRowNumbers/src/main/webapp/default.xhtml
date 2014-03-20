@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+    </h:head>
+    <h:body>
+    	
+    	<h1>Display dataTable row numbers in JSF</h1>
+    	
+    		<h:dataTable value="#{person.personList}" var="p"
+    			styleClass="person-table"
+    			headerClass="person-table-header"
+    			rowClasses="person-table-odd-row,person-table-even-row"
+    		>
+
+				<h:column>
+    			
+    				<f:facet name="header">No</f:facet>
+    				#{person.personList.rowIndex + 1}
+    				
+    			</h:column>
+    			
+    			<h:column>
+    			
+    				<f:facet name="header">First Name</f:facet>
+    				#{p.firstName}
+    				
+    			</h:column>
+    			
+    			<h:column>
+    			
+    				<f:facet name="header">Last Name</f:facet>
+    				#{p.lastName}
+    				
+    			</h:column>
+    			
+    			<h:column>
+    				
+    				<f:facet name="header">Age</f:facet>
+    				#{p.age}
+    				
+    			</h:column>
+    			
+    		</h:dataTable>
+    		
+    </h:body>
+</html>

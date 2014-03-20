@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:body>
+    	
+    	<h1>JSF 2 link, commandLink and outputLink example</h1>
+    	
+    	<h:form>
+    	<ol>
+	    	<li>
+	    		<h:link value="Login page" outcome="login" />
+	    	</li>
+	    	<li>
+	    		<h:link value="Login page + Param " outcome="login" >
+	    			<f:param name="username" value="mkyong" />
+	    		</h:link>
+	    	</li>
+	    	<li>
+	    		<h:link outcome="login" >
+	    			<h:graphicImage library="images" name="sofa.png" />
+	    		</h:link>
+	    	</li>
+	    	
+	    	<li>
+	    		<h:commandLink value="Login page" />
+	    	</li>
+	    	<li>
+	    		<h:commandLink action="#{user.goLoginPage}" value="Login page" />
+	    	</li>
+	    	<li>
+	    		<h:commandLink action="#{user.goLoginPage}" value="Login page + Param ">
+	    			<f:param name="username" value="mkyong" />
+	    		</h:commandLink>
+	    	</li>
+	    	<li>
+	    		<h:commandLink action="#{user.goLoginPage}">
+	    			<h:graphicImage library="images" name="sofa.png" />
+	    		</h:commandLink>
+	    	</li>
+	    	<li>
+	    		<h:outputLink>
+	    			Login page
+	    		</h:outputLink>
+	    	</li>
+	    	<li>
+	    		<h:outputLink value="login.xhtml" >
+	    			Login page
+	    		</h:outputLink>
+	    	</li>
+	    	<li>
+	    		<h:outputLink value="login.xhtml">
+	    			<h:outputText value="Login page" />
+	    			<f:param name="username" value="mkyong" />
+	    		</h:outputLink>
+	    	</li>
+	    	<li>
+	    		<h:outputLink value="login.xhtml">
+	    			<h:graphicImage library="images" name="sofa.png" />
+	    		</h:outputLink>
+	    	</li>
+    	</ol>
+    	</h:form>
+    	
+    </h:body>
+
+</html>

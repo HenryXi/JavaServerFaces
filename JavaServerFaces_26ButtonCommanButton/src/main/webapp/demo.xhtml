@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      >
+    <h:head></h:head>
+    <h:body>
+    	
+    	<h1>JSF 2 button and commandButton example</h1>
+    	
+    	<h:form>
+    	<ol>
+	    	<li>
+	    		<h:commandButton value="submit" type="submit" action="#{user.goLoginPage}" />
+	    	</li>
+	    	<li>
+	    		<h:commandButton value="reset" type="reset" />
+	    	</li>
+	    	<li>
+	    		<h:commandButton value="button" type="button" />
+	    	</li>
+	    	<li>
+	    		<h:commandButton value="Click Me" type="button" onclick="alert('h:commandButton');" />
+	    	</li>
+	    	<li>
+	    		<h:button value="buton" />
+	    	</li>
+	    	<li>
+	    		<h:button value="Click Me" onclick="alert('h:button');" />
+	    	</li>
+	    	<li>
+	    		<h:button value="buton" outcome="login" />
+	    	</li>
+    	</ol>
+    	</h:form>
+    	
+    </h:body>
+
+</html>

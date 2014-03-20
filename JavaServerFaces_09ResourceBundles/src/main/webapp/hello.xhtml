@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+	<!-- load resource bundle for this page only 
+	<f:loadBundle basename="com.mkyong.messages" var="msg"/>
+	-->
+	
+    <h:body>
+    	<h2>JSF 2.0 and Resource Bundles Examples</h2>
+    	<ol>
+    	
+	    	<li><h:outputText value="#{msg.message}" /></li>
+	    	
+	    	<li><h:outputText value="#{msg['message.test1']}" /></li>
+	    	
+	    	<li><h:outputText value="#{msg['message.test2']}" /></li>
+	    	<li><h:outputText value="#{msg['message.test2']}" escape="false" /></li>
+	    	
+	    	<li><h:outputText value="#{msg['message.test3']}" /></li>
+	    	<li><h:outputText value="#{msg['message.test3']}" escape="false" /></li>
+	    
+	    	<li>
+	    		<h:outputFormat value="#{msg['message.param1']}">
+	    			<f:param value="param0" />
+	    		</h:outputFormat>
+	    	</li>
+	    	<li>
+	    		<h:outputFormat value="#{msg['message.param2']}">
+	    			<f:param value="param0" />
+	    			<f:param value="param1" />
+	    		</h:outputFormat>
+	    	</li>
+    	</ol>
+	</h:body>
+</html>

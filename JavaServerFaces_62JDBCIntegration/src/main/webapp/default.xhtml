@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+    </h:head>
+ 
+    <h:body>
+ 
+    	<h1>JSF 2.0 + JDBC Example</h1>
+ 
+ 		<h:dataTable value="#{customer.getCustomerList()}" var="c"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+ 
+    		<h:column>
+    			<f:facet name="header">
+    				Customer ID
+    			</f:facet>
+    				#{c.customerID}
+    		</h:column>
+ 
+    		<h:column>
+    			<f:facet name="header">
+    				Name
+				</f:facet>
+    				#{c.name}
+    		</h:column>
+ 
+ 			<h:column>
+    			<f:facet name="header">
+    				Address
+				</f:facet>
+    				#{c.address}
+    		</h:column>
+    		
+    		<h:column>
+    			<f:facet name="header">
+    				Created Date
+				</f:facet>
+    				#{c.created_date}
+    		</h:column>
+    		
+    	</h:dataTable>
+ 		
+    </h:body>
+ 
+</html>

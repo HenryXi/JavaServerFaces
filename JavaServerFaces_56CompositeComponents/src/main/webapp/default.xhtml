@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:mkyong="http://java.sun.com/jsf/composite/mkyong"
+      >
+ 
+    <h:body>
+ 
+    	<h1>Composite Components in JSF 2.0</h1>
+ 
+		<mkyong:register 
+			nameLable="Name" 
+			nameValue="#{user.name}" 
+			emailLable="E-mail" 
+			emailValue="#{user.email}"
+
+			registerButtonText="Register" 
+			registerButtonAction="#{user.registerAction}"
+			 />
+	
+    </h:body>
+ 
+</html>

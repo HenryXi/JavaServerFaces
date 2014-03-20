@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:body>
+    	
+    	<h1>JSF 2 valueChangeListener example</h1>
+		
+		<h:form>
+		
+			<h:panelGrid columns="2">
+			
+				Selected country locale : 
+				<h:inputText id="country" value="#{country.localeCode}" size="20" />
+					
+				Select a country {method binding}: 
+				<h:selectOneMenu value="#{country.localeCode}" onchange="submit()"
+					valueChangeListener="#{country.countryLocaleCodeChanged}">
+   					<f:selectItems value="#{country.countryInMap}" />
+   				</h:selectOneMenu>
+
+				<ui:remove>
+				<!-- comment above valueChangeListener attribute and delete the ui:remove tags for testing -->
+				Select a country {ValueChangeListener class}: 
+				<h:selectOneMenu value="#{country.localeCode}" onchange="submit()">
+					<f:valueChangeListener type="com.mkyong.CountryValueListener" />
+   					<f:selectItems value="#{country.countryInMap}" />
+   				</h:selectOneMenu>
+   				</ui:remove>
+   				
+			</h:panelGrid>
+			
+		</h:form>
+		
+    </h:body>
+</html>

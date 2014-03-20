@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+    <application>
+    	
+    	<!-- Application is started -->
+    	<system-event-listener>
+			<system-event-listener-class>
+				com.mkyong.FacesAppListener
+			</system-event-listener-class>
+			<system-event-class>
+				javax.faces.event.PostConstructApplicationEvent
+			</system-event-class>    					
+    	</system-event-listener> 	 
+    	
+    	<!-- Before Application is shut down -->
+    	<system-event-listener>
+			<system-event-listener-class>
+				com.mkyong.FacesAppListener
+			</system-event-listener-class>
+			<system-event-class>
+				javax.faces.event.PreDestroyApplicationEvent
+			</system-event-class>    					
+    	</system-event-listener> 	 
+    	
+    	
+    </application>
+</faces-config>

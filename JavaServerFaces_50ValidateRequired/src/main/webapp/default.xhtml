@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:body>
+    	
+    	<h1>JSF 2 validateRequired example</h1>
+		
+		<h:form>
+		
+			<h:panelGrid columns="3">
+			
+				Enter your password : 
+				
+				<h:inputSecret id="password" value="#{user.password}" 
+					size="20" required="true"
+					label="Password" />
+				
+				<h:message for="password" style="color:red" />
+			
+				Enter your password again : 
+				
+				<h:inputSecret id="confPassword" value="#{user.confPassword}" 
+					size="20" required="true"
+					label="Confirm Password">
+					<f:validateRequired />	
+				</h:inputSecret>
+				
+				<h:message for="confPassword" style="color:red" />
+				
+			</h:panelGrid>
+			
+			<h:commandButton value="Submit" action="result" />
+			
+		</h:form>
+		
+    </h:body>
+</html>
