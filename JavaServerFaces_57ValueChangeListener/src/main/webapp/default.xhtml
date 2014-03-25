@@ -27,7 +27,7 @@
 				<!-- comment above valueChangeListener attribute and delete the ui:remove tags for testing -->
 				Select a country {ValueChangeListener class}: 
 				<h:selectOneMenu value="#{country.localeCode}" onchange="submit()">
-					<f:valueChangeListener type="com.mkyong.CountryValueListener" />
+					<f:valueChangeListener type="com.xxy.CountryValueListener" />
    					<f:selectItems value="#{country.countryInMap}" />
    				</h:selectOneMenu>
    				</ui:remove>

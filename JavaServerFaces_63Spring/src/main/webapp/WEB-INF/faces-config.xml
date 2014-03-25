@@ -3,7 +3,7 @@
 <faces-config xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
-	version="2.1">
+	version="2.0">
 
 	<application>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
@@ -11,7 +11,7 @@
 
 	<managed-bean>
 		<managed-bean-name>user</managed-bean-name>
-		<managed-bean-class>com.mkyong.UserBean</managed-bean-class>
+		<managed-bean-class>com.xxy.UserBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 		<managed-property>
 			<property-name>userBo</property-name>

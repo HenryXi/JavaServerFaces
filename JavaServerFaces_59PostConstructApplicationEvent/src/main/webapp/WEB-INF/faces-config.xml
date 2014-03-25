@@ -10,18 +10,16 @@
     	<!-- Application is started -->
     	<system-event-listener>
 			<system-event-listener-class>
-				com.mkyong.FacesAppListener
-			</system-event-listener-class>
-			<system-event-class>
-				javax.faces.event.PostConstructApplicationEvent
-			</system-event-class>    					
-    	</system-event-listener> 	 
+                com.xxy.FacesAppListener
+            </system-event-listener-class>
+			<system-event-class>javax.faces.event.PostConstructApplicationEvent</system-event-class>
+    	</system-event-listener>
     	
     	<!-- Before Application is shut down -->
     	<system-event-listener>
 			<system-event-listener-class>
-				com.mkyong.FacesAppListener
-			</system-event-listener-class>
+                com.xxy.FacesAppListener
+            </system-event-listener-class>
 			<system-event-class>
 				javax.faces.event.PreDestroyApplicationEvent
 			</system-event-class>    					

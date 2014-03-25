@@ -6,14 +6,14 @@ http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<context:component-scan base-package="com.mkyong" />
+	<context:component-scan base-package="com.xxy" />
 
 <!-- 
 	<context:annotation-config />
  -->
  
 	<!-- 
-	<bean id="userBo" class="com.mkyong.user.bo.impl.UserBoImpl"> 
+	<bean id="userBo" class="com.xxy.user.bo.impl.UserBoImpl">
 		<property name="name" value="mkyong.com" /> 
 	</bean> 
 	-->

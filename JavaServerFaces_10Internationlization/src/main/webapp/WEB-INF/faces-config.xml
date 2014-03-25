@@ -10,7 +10,7 @@
      		<default-locale>en</default-locale>
      	</locale-config>
 		<resource-bundle>
-			<base-name>com.mkyong.welcome</base-name>
+			<base-name>com.xxy.welcome</base-name>
 			<var>msg</var>
 		</resource-bundle>
      </application>

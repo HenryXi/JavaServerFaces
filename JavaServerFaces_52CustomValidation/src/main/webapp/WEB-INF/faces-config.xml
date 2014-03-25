@@ -7,7 +7,7 @@
     version="2.0">
      <application>
 	  	<message-bundle>
-	  		com.mkyong.MyMessage
+	  		com.xxy.MyMessage
 	  	</message-bundle>
      </application>
 </faces-config>

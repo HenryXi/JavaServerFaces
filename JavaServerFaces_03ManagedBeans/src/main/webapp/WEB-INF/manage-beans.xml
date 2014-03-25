@@ -7,7 +7,7 @@
     version="2.0">
 	<managed-bean>
 		<managed-bean-name>helloBean</managed-bean-name>
-		<managed-bean-class>com.mkyong.common.HelloBean</managed-bean-class>
+		<managed-bean-class>com.xxy.common.HelloBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 </faces-config>
