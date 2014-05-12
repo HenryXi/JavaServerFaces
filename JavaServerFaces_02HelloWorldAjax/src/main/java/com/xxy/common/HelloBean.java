@@ -29,14 +29,4 @@ public class HelloBean implements Serializable {
         this.name = name;
     }
 
-    public String getSayWelcome() {
-        if ("".equals(name) || name == null) {
-            name="after";
-            return "";
-        } else {
-            name="after";
-            return "Ajax message : Welcome " + name;
-        }
-    }
-
 }
