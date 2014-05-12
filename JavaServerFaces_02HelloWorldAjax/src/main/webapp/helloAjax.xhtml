@@ -4,20 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
-
+<h:head><h3>JSF 2.0 + Ajax Hello World Example</h3></h:head>
 <h:body>
-    <h3>JSF 2.0 + Ajax Hello World Example</h3>
-
     <h:form>
-
         <h:inputText id="name" value="#{helloBean.name}"></h:inputText>
+        <h:inputText id="name2" value="#{helloBean.name2}"></h:inputText>
         <h:commandButton value="Welcome Me">
             <f:ajax execute="name" render="output"/>
         </h:commandButton>
 
-        <h2><h:outputText id="output" value="#{helloBean.sayWelcome}"/></h2>
-
+        <h2>The first input value: <h:outputText id="output" value="#{helloBean.name}"/></h2>
+        <h2>The second input value: <h:outputText id="output2" value="#{helloBean.name2}"/></h2>
     </h:form>
-
 </h:body>
 </html>

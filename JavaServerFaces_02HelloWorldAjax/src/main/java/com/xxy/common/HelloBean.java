@@ -11,6 +11,15 @@ public class HelloBean implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String name;
+    private String name2;
+
+    public String getName2() {
+        return name2;
+    }
+
+    public void setName2(String name2) {
+        this.name2 = name2;
+    }
 
     public String getName() {
         return name;
@@ -21,10 +30,11 @@ public class HelloBean implements Serializable {
     }
 
     public String getSayWelcome() {
-        //check if null?
         if ("".equals(name) || name == null) {
+            name="after";
             return "";
         } else {
+            name="after";
             return "Ajax message : Welcome " + name;
         }
     }
