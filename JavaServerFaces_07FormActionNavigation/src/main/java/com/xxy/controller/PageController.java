@@ -19,4 +19,7 @@ public class PageController implements Serializable {
 		return "success";
 	}
 	
+	public String processPage3(){
+		return "success";
+	}
 }

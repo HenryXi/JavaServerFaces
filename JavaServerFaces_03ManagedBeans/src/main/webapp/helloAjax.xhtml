@@ -10,8 +10,10 @@
  
     	<h:form>
     	   <h:inputText id="name" value="#{helloBean.name}"></h:inputText>
+    	    <h:inputText id="name1" value="#{helloBean.passwrod}"></h:inputText>
     	   <h:commandButton value="Welcome Me">
-    		 <f:ajax execute="name" render="output" />
+    		<!--  <f:ajax execute="name" render="output" /> -->
+    		 <f:ajax execute="name1" render="output" />
     	   </h:commandButton>
  
     	   <h2><h:outputText id="output" value="#{helloBean.sayWelcome}" /></h2>	
