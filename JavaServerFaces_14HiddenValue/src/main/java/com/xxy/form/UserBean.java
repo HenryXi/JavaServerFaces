@@ -8,7 +8,8 @@ import java.io.Serializable;
 @SessionScoped
 public class UserBean implements Serializable {
 
-	String answer = "I'm Hidden value!";
+  private String answer = "I'm Hidden value!";
+	
 
 	public String getAnswer() {
 		return answer;
@@ -17,6 +18,5 @@ public class UserBean implements Serializable {
 	public void setAnswer(String answer) {
 		this.answer = answer;
 	}
-
-	
+ 
 }

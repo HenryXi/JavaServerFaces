@@ -1,5 +1,6 @@
 package com.xxy;
 
+import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -8,8 +9,12 @@ import javax.faces.bean.SessionScoped;
  
 @ManagedBean(name="user")
 @SessionScoped
-public class UserBean{
+public class UserBean implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public String favColor1;
 	public String favColor2;
 	public String favColor3;

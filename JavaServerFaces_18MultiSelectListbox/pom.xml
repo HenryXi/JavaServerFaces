@@ -10,6 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>JavaServerFaces_18MultiSelectListbox</artifactId>
-
+      <packaging>war</packaging>
 
 </project>

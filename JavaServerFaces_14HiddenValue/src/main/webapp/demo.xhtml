@@ -8,7 +8,9 @@
 	<script type="text/javascript">
 		function printHiddenValue(){
 			try{
-				alert(document.getElementById('myform:hiddenId').value);	
+				let answerValue = document.getElementById('myform:hiddenId').value;
+				console.log(answerValue);
+				alert(answerValue);	
 			}catch(e){
 				alert(e);
 			}
