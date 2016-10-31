@@ -24,15 +24,17 @@ public class UserBean {
 	public String getCountryParam(FacesContext fc) {
 
 		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
+		System.out.println("country:" + params.get("country"));
 		return params.get("country");
-
 	}
 
 	public String getName() {
+		
 		return name;
 	}
 
 	public void setName(String name) {
+		
 		this.name = name;
 	}
 
