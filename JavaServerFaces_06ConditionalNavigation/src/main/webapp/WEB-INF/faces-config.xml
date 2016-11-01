@@ -10,7 +10,7 @@
 		<from-view-id>start.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>payment</from-outcome>
-			<if>#{paymentController.orderQty &lt; 100}</if>
+			<if>#{paymentController.orderQty > 100}</if>
 			<to-view-id>ordermore.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>

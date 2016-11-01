@@ -18,6 +18,11 @@
 			<from-outcome>success</from-outcome>
 			<to-view-id>page2.xhtml</to-view-id>
 		</navigation-case>
+		<navigation-case>
+			<from-action>#{pageController.processPage3}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>page3.xhtml</to-view-id>
+		</navigation-case>
 	</navigation-rule>
 	
 </faces-config>

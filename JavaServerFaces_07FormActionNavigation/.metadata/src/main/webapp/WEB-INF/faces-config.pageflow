@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14776168781290" configfile="/JavaServerFaces_07FormActionNavigation/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="start.xhtml" x="122" y="370" id="pf14776170225971" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14776170225982 pf14776170225983 pf14776170285097" path="start.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page1.xhtml" x="338" y="178" id="pf14776170225985" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14776170225982" path="page1.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" x="338" y="562" id="pf14776170225986" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14776170225983" path="page2.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page3.xhtml" id="pf14776170285098" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14776170285097" path="page3.xhtml"/>
+  <links id="pf14776170225982" target="pf14776170225985" source="pf14776170225971" outcome="success" fromaction="#{pageController.processPage1}"/>
+  <links id="pf14776170225983" target="pf14776170225986" source="pf14776170225971" outcome="success" fromaction="#{pageController.processPage2}"/>
+  <links id="pf14776170285097" target="pf14776170285098" source="pf14776170225971" outcome="success" fromaction="#{pageController.processPage3}"/>
+</pageflow:Pageflow>

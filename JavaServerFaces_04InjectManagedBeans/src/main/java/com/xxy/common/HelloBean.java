@@ -14,12 +14,20 @@ public class HelloBean implements Serializable {
 	
 	@ManagedProperty(value="#{message}")
 	private MessageBean messageBean;
+	@ManagedProperty(value="#{fail}")
+	private FailBean failBean;
 
+	private String name;
+
+    //注入只需要set方法就可以了
 	public void setMessageBean(MessageBean messageBean) {
 		this.messageBean = messageBean;
 	}
 
-	private String name;
+
+	public void setFailBean(FailBean failBean) {
+		this.failBean = failBean;
+	}
 
 	public String getName() {
 		return name;
@@ -33,7 +41,9 @@ public class HelloBean implements Serializable {
 		//check if null?
 		if("".equals(name) || name ==null){
 			return "";
-		}else{
+		}else if (name.equals(failBean.getName())) {
+			return failBean.getSayHello();
+		}{
 			return messageBean.getSayWelcome() + name;
 		}
 	}

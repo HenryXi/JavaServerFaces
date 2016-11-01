@@ -41,7 +41,6 @@ public class OrderBean implements Serializable{
 		for (Order order : orderList){
 			order.setEditable(false);
 		}
-		
 		//return to current page
 		return null;
 		

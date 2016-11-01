@@ -11,7 +11,7 @@ public class PaymentController implements Serializable {
  
 	private static final long serialVersionUID = 1L;
  
-	public boolean registerCompleted = true;
+	public boolean registerCompleted = false;
 	public int orderQty = 99;
 	
 	public int getOrderQty() {

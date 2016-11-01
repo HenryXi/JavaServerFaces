@@ -11,6 +11,7 @@
         <h:inputText id="name2" value="#{helloBean.name2}"></h:inputText>
         <h:commandButton value="Welcome Me">
             <f:ajax execute="name" render="output"/>
+            <f:ajax execute="name2" render="output"/>
         </h:commandButton>
 
         <h2>The first input value: <h:outputText id="output" value="#{helloBean.name}"/></h2>

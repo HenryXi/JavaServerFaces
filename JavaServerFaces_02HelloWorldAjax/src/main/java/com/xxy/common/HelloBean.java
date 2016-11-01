@@ -12,8 +12,17 @@ public class HelloBean implements Serializable {
 
     private String name;
     private String name2;
+    private String passwrod;
 
-    public String getName2() {
+    public String getPasswrod() {
+		return passwrod;
+	}
+
+	public void setPasswrod(String passwrod) {
+		this.passwrod = passwrod;
+	}
+
+	public String getName2() {
         return name2;
     }
 
@@ -28,5 +37,6 @@ public class HelloBean implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+    
 
 }

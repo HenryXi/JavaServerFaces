@@ -10,6 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>JavaServerFaces_07FormActionNavigation</artifactId>
-
+     <packaging>war</packaging>
 
 </project>
